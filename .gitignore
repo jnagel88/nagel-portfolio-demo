@@ -20,3 +20,5 @@
 
 #ignore secrets
 /config/secrets.yml
+
+/.idea
