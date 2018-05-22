@@ -1,11 +1,13 @@
-<h1>show item</h1>
+<%= image_tag @portfolio_item.main_image %>
 
-<p><img src="<%=  @portfolio_item.main_image %>" /></p>
 <em><%= @portfolio_item.title %></em>
+
 <p><%=  @portfolio_item.subtitle %></p>
+
 <p><%=  @portfolio_item.body %></p>
 
 <h2>Technologies Used</h2>
+
 <% @portfolio_item.technologies.each do |t| %>
   <p><%= t.name%> </p>
 <% end %>
