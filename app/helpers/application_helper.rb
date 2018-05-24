@@ -18,4 +18,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+   NagelViewTool::Renderer.copyright 'Joe Nagel', 'All Rights Reserved'
+  end
+
 end
