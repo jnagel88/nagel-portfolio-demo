@@ -4,4 +4,12 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUserConcern
   include DefaultPageContent
+  include NagelViewTool
+
+  before_action :set_copyright
+
+  def set_copyright
+    @copyright = NagelViewTool::Renderer.copyright 'Joe Nagel', 'All Rights Reserved'
+  end
 end
+
