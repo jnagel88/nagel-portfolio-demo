@@ -22,4 +22,12 @@ module ApplicationHelper
    NagelViewTool::Renderer.copyright 'Joe Nagel', 'All Rights Reserved'
   end
 
+  def password_placeholder
+    if @minimum_password_length
+      "#{@minimum_password_length} characters minimum".html_safe
+    else
+      nil
+    end
+  end
+
 end
