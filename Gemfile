@@ -53,5 +53,6 @@ gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 
