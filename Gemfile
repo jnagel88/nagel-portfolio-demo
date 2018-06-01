@@ -42,6 +42,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'certified', '~> 1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -55,6 +56,9 @@ gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
-
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'dotenv-rails', '~> 2.4'
 
 

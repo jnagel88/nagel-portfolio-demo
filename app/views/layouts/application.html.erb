@@ -15,12 +15,20 @@
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-      <!--<p class="notice"><%#= notice %></p>-->
-      <!--<p class="alert"><%#= alert %></p>-->
+      <%= video_tag(
+          'HardDrivePhotojpeg.mp4',
+          id: 'background',
+          autoplay: true,
+          loop: true,
+          muted: 'muted',
+          poster: 'home_bg.png'
+          )
+      %>
 
       <%= render 'shared/application_nav'%>
 
-
+      <!--<p class="notice"><%#= notice %></p>-->
+      <!--<p class="alert"><%#= alert %></p>-->
 
       <%= yield %>
 
