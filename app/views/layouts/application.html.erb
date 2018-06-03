@@ -27,14 +27,14 @@
 
       <%= render 'shared/application_nav'%>
 
-      <!--<p class="notice"><%#= notice %></p>-->
-      <!--<p class="alert"><%#= alert %></p>-->
-
       <%= yield %>
 
       <%= source_helper('application') %>
 
+      <%= alerts %>
+
       <%= render 'shared/application_footer'%>
     </div>
+
   </body>
 </html>
