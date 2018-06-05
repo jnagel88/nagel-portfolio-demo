@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'about-me' => 'pages#about'
   get 'contact' => 'pages#contact'
+  get 'tech-news' => 'pages#tech_news'
 
 
 end
