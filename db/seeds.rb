@@ -6,6 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create!(
+  email: 'admin@test.com',
+  name: 'Admin User',
+  password: 'test123',
+  password_confirmation: 'test123',
+  roles: 'site_admin'
+  )
+puts "1 admin seeded"
+
+User.create!(
+  email: 'user@test.com',
+  name: 'Guest User',
+  password: 'test123',
+  password_confirmation: 'test123'
+  )
+puts '1 Guest user seeded'
+
+
 3.times do |topic|
   Topic.create!(
            title: "Topic #{topic}"
@@ -29,7 +47,7 @@ puts 'Blogs Seeded'
            percent_utilized: 15
   )
 end
-puts 'Skills Seeded'
+puts '5 Skills Seeded'
 
 8.times do |portfolio_item|
   Portfolio.create!(
@@ -52,7 +70,7 @@ end
         position: 9
     )
   end
-puts 'Portfolio Items Seeded'
+puts '9 Portfolio Items Seeded'
 
 3.times do |technology|
   Portfolio.last.technologies.create!(
@@ -60,6 +78,6 @@ puts 'Portfolio Items Seeded'
   )
 
 end
-puts "Technologies completed"
+puts "3 Technologies completed"
 
 puts "All Seeds Completed"
