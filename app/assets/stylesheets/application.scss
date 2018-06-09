@@ -174,3 +174,16 @@ body {
 .tech-news > .card {
   padding: 15px;
 }
+
+.app-card-container {
+  color: black;
+  background-color: rgba(1,1,1,0.4);
+}
+
+.app-card-container > .card {
+padding: 15px;
+}
+
+.app-card-container a {
+  color: blue;
+}
