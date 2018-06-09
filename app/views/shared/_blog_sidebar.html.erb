@@ -4,6 +4,16 @@
     <p>A <i>Ruby on Rails</i> Developer that enjoys learning and puzzling. I also like the occasional adventure outdoors.</p>
   </div>
 
+    <%= source_helper("blog-sidebar-source alert alert-primary") %>
+ 
+
+  <div class="sidebar-module">
+    <h4>Topics</h4>
+    <% @sidebar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+    <% end %>
+  </div>
+
   <div class="sidebar-module">
     <h4>Elsewhere</h4>
     <ol class="list-unstyled social-links">

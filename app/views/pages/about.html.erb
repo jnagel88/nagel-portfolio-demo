@@ -1,23 +1,86 @@
-<h1>About Me</h1>
-<hr />
+<div class="app-card-container">
+  <div class="card">
+    <h2>About Me</h2>
+    <hr />
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile_pic.jpg", width: 200, alt:"Profile image" %>
 
-<div class="row">
-  <div class="col-md-4">
-    <!--<img src="file:///C:/Users/Joe/Dropbox/headshots/106-2-3.jpg" alt="Profile Image" />-->
-    <%= image_tag "profile_pic.jpg", width: 250, alt:"Profile image" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-  </div>
+      <div class="col-md-8">
+        <p>
+          After working in the theatre and live entertainment industry for more than a decade, working with clients from the production aspect, from the venue aspect as well as from the designer’s aspect, I have gained a unique perspective on client relations and communications.
+        </p>
+        <p>
+          Wanting to expand my love of puzzles and logic, I decided to transition to software development to not only explore software development, but to bring my passion for puzzles, logic and communication to others.
+        </p>
 
-  <div class="col-md-8">
-    <p>
-      After working in the theatre and live entertainment industry for more than a decade, working with clients from the production aspect, from the venue aspect as well as from the designer’s aspect, I have gained a unique perspective on client relations and communications.
-    </p>
-    <p>
-      Wanting to expand my love of puzzles and logic, I decided to transition to software development to not only explore software development, but to bring my passion for puzzles, logic and communication to others.
-    </p>
+       <!--  <p>
+          In an ever changing industry, you have to be willing to always be a student. And to that end, I spend a good portion of my spare time building projects or reading about new technologies, techniques, and methods in order to always improve my own skills, but to also teach others what I have learned.
+        </p> -->
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded='false'
+            aria-controller='jobHistory'
+          >
+            Job History
+          </button>
 
-    <p>
-      In an ever changing industry, you have to be willing to always be a student. And to that end, I spend a good portion of my spare time building projects or reading about new technologies, techniques, and methods in order to always improve my own skills, but to also teach others what I have learned.
-    </p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded='false'
+            aria-controller='education'
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Job 1
+            </div>
+            <div class="card card-block">
+              Job 2
+            </div>
+          </div>  
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              school 1
+            </div>
+            <div class="card card-block">
+              school 2
+            </div>
+          </div> 
+        </p>
+
+      </div>
+    </div>
   </div>
 </div>
+
+
