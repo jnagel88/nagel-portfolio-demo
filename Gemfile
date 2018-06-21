@@ -24,8 +24,13 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'certified', '~> 1.0'
   gem 'capistrano'
+  gem 'capistrano-nginx'
   gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
+  gem 'capistrano-rails-db'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-upload-config'
+  gem 'sshkit-sudo'
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
 end
