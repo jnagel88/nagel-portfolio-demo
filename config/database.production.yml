@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: NagelPortfolio_production
-  username: NagelPortfolio
+  username: deploy
   password: <%= ENV['NagelPORTFOLIO_DATABASE_PASSWORD'] %>
