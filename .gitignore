@@ -29,3 +29,4 @@ config/database.yml/config/database.production.yml
 
 # Ignore application configuration
 /config/application.yml
+/config/application.production.yml
