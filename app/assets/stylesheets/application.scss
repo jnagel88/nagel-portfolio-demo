@@ -63,7 +63,7 @@ h6, .h6, {
   margin-bottom: 2rem;
 }
 
-.masthead-brand {
+.navbar-brand {
   margin-bottom: 0;
 }
 
@@ -96,6 +96,10 @@ h6, .h6, {
   .nav-masthead {
     float: right;
   }
+}
+
+.navbar-toggler-icon {
+  color: white;
 }
 
 
