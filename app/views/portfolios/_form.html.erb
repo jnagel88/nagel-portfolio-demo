@@ -23,6 +23,9 @@
         <label class="btn btn-primary">
           Upload a Main Image File <%= form.file_field :main_image, style: 'display:none;' %>
         </label>
+        <% if @portfolio_item.main_image? %>
+          <%= File.basename(@portfolio_item.main_image.path) %>
+        <% end %>
           <%#= File.basename(@portfolio_item.main_image.path) %>
       </div>
 
@@ -30,11 +33,9 @@
         <label class="btn btn-primary">
           Upload a Thumbnail Image File <%= form.file_field :thumb_image, style: 'display:none;' %>
         </label>
-        <%# if File.basename(@portfolio_item.thumb_image.path).nil? %>
-          <!-- Select an image -->
-        <%# else %>
-          <%#= File.basename(@portfolio_item.thumb_image.path) %>
-        <%# end %>
+        <% if @portfolio_item.thumb_image? %>
+          <%= File.basename(@portfolio_item.thumb_image.path) %>
+        <% end %>
       </div>
 
     </div>
