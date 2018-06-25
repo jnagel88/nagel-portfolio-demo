@@ -10,6 +10,7 @@
           <%= link_to 'View', portfolio_show_path(portfolio_item), class:'btn btn-sm btn-outline-secondary', type:'button' %>
           <%= link_to 'Edit', edit_portfolio_path(portfolio_item), class:'btn btn-sm btn-outline-secondary', type:'button' if logged_in?(:site_admin) %>
         </div>
+          <span class="float-right"><%= link_to "Delete", portfolio_path(portfolio_item), method: "delete", class: "btn btn-sm btn-danger" if logged_in?(:site_admin) %></span>
         <!--<small class="text-muted">9 mins</small>-->
       </div>
     </div>

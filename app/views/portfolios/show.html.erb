@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-md-5">
-      <em><%= @portfolio_item.title %></em>
+      <h3><%= @portfolio_item.title %></h3>
       <hr />
       <i><%=  @portfolio_item.subtitle %></i>
 
@@ -13,14 +13,15 @@
 
       <hr />
       <h2>Technologies Used</h2>
-      <% @portfolio_item.technologies.each do |t| %>
-        <p><%= t.name%> </p>
-      <% end %>
-
+      <p>
+        <% @portfolio_item.technologies.each do |t| %>
+          <button class="btn btn-sm btn-info"><%= t.name%></button>  
+        <% end %>
+      </>
       <% if logged_in?(:site_admin) %>
       <div>
         <%= link_to 'Edit Item', edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
-        <%#= link_to "Delete Item", portfolio_path(@portfolio_item), :method => "delete", class: "btn btn-danger" %>
+        <%= link_to "Delete Item", portfolio_path(@portfolio_item), method: "delete", class: "btn btn-danger" %>
       </div>
     <% end %>
     </div>
