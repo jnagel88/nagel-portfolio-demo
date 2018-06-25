@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   end
 
   get 'portfolio/:id' => 'portfolios#show', as: 'portfolio_show'
-  get 'angular' => "portfolios#angular"
-
   get 'about-me' => 'pages#about'
   get 'contact' => 'pages#contact'
   get 'tech-news' => 'pages#tech_news'
