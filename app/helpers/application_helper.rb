@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def copyright_generator
-   NagelViewTool::Renderer.copyright 'Joe Nagel', 'All Rights Reserved'
+    "<p>&copy; #{Time.now.year} | <b>Joe Nagel</b> All Rights Reserved</p>".html_safe
   end
 
   def password_placeholder
